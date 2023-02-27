@@ -1,0 +1,21 @@
+* {
+  background-color: tomato;
+}
+.box1,
+.box2 {
+  /* margin: auto; */
+}
+
+.box1 {
+  background-color: skyblue;
+  width: 60px;
+  height: 60px;
+  border: 20px solid black;
+  padding: 20px;
+}
+.box2 {
+  background-color: violet;
+  width: 100px;
+  height: 100px;
+  border: 20px solid purple;
+}
