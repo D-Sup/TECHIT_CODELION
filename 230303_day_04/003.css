@@ -1,0 +1,37 @@
+body {
+  background-color: tomato;
+}
+h1,
+h2,
+p {
+  font-family: 'Dongle', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: #1e1e1e;
+  margin: 0px;
+}
+
+strong {
+  font-style: italic;
+  font-size: 0.5em;
+  vertical-align: bottom;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin: 100px auto;
+  background-color: #fff;
+  box-shadow: 10px 5px 5px rgb(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+p {
+  text-decoration-color: yellow;
+  text-decoration-line: underline;
+  text-decoration-thickness: 5px;
+}

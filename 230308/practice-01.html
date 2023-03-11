@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 페이지</title>
+    <style>
+      .title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 16px;
+        font-family: 'Spoqa Han Sans Neo';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+      }
+      .container {
+        width: 350px;
+        height: 140px;
+        background: #ffffff;
+        border: 1px solid #dbdbdb;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .button {
+        width: 318px;
+        height: 40px;
+        background-color: #711bff;
+        border-radius: 4px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .button img {
+        width: 64px;
+        height: 18px;
+      }
+      .button p {
+        font-family: 'Spoqa Han Sans Neo';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: #ffffff;
+      }
+      .bottom {
+        width: 318px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .bottom img {
+        width: 16px;
+        height: 16px;
+      }
+      .bottom a {
+        font-family: 'Spoqa Han Sans Neo';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #767676;
+        text-decoration: none;
+      }
+    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div class="container">
+      <p class="title">더 편리해진 위니브에 오신 것을 환영합니다.</p>
+      <div class="button">
+        <img src="./practice-01-images/weniv-logo.png" alt="" />
+        <p>로그인</p>
+      </div>
+      <div class="bottom">
+        <a href="/"><img src="./practice-01-images/icon-lock.png" alt="" />아이디 | 비밀번호 찾기</a>
+        <a href="/"><img src="./practice-01-images/icon-user.png" alt="" />회원가입</a>
+      </div>
+    </div>
+    <!-- JavaScript -->
+    <script src=""></script>
+  </body>
+</html>
