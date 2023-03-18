@@ -1,0 +1,373 @@
+@keyframes tongueMoving {
+  0% {
+    height: 45px;
+  }
+  100% {
+    height: 85px;
+  }
+}
+@keyframes noseMoving {
+  60% {
+    transform: translateY(0%);
+  }
+  70% {
+    transform: translateY(-20%);
+  }
+  80% {
+    transform: translateY(-0%);
+  }
+  90% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(-0%);
+  }
+}
+@keyframes leftEarMoving {
+  0% {
+    transform: matrix(-0.83, -0.56, -0.56, 0.83, 0, 0) scale(1);
+  }
+  60% {
+    transform: matrix(-0.83, -0.56, -0.56, 0.83, 0, 0) scale(1.1);
+  }
+  100% {
+    transform: matrix(-0.83, -0.56, -0.56, 0.83, 0, 0) scale(1.1);
+  }
+}
+@keyframes rightEarMoving {
+  0% {
+    transform: rotate(-34.27deg) scale(1);
+  }
+  70% {
+    transform: rotate(-34.27deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(-34.27deg) scale(1.1);
+  }
+}
+@keyframes leftEyeMoving {
+  0% {
+    transform: matrix(-1, 0, 0, 1, 0, 0) scale(1);
+  }
+  30% {
+    transform: matrix(-1, 0, 0, 1, 0, 0) rotate(10deg) scale(1.1);
+  }
+  60% {
+    transform: matrix(-1, 0, 0, 1, 0, 0) scale(1.1);
+  }
+  100% {
+    transform: matrix(-1, 0, 0, 1, 0, 0) rotate(10deg) scale(1.1);
+  }
+}
+@keyframes rightEyeMoving {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: rotate(10deg) scale(1.1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: rotate(10deg) scale(1.1);
+  }
+}
+@keyframes hairMoving {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: rotate(10deg) scale(1.02);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: rotate(10deg) scale(1.02);
+  }
+}
+@keyframes hairFrontMoving {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: rotate(10deg) scale(1.02);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: rotate(10deg) scale(1.02);
+  }
+}
+@keyframes spinMoving {
+  0% {
+    transform: rotateY(60deg);
+  }
+  to {
+    transform: rotateY(360deg) scale(1.3);
+  }
+}
+
+.spin {
+  animation: spinMoving 1s infinite alternate;
+  width: 100px;
+  top: -70%;
+  left: 36%;
+}
+body {
+  background-color: #62b6b7;
+}
+.container {
+  position: relative;
+  width: 363.65px;
+  height: 328.65px;
+  margin: 350px auto;
+}
+.face {
+  margin: auto;
+  width: 363.65px;
+  height: 328.65px;
+  background: #f7c04a;
+  border-radius: 384.5px;
+  overflow: hidden;
+}
+.facemask {
+  width: 469.93px;
+  height: 328.65px;
+  top: 167px;
+  transform: translate(-10%);
+  background: #efefef;
+  border-radius: 384.5px;
+}
+.ear {
+  animation: leftEarMoving 0.7s infinite alternate;
+  width: 158.03px;
+  height: 139.56px;
+  z-index: -1;
+  top: -20%;
+  left: 67%;
+  background: #f7c04a;
+  border-radius: 360px 76px 0px 0px;
+  transform: matrix(-0.83, -0.56, -0.56, 0.83, 0, 0);
+}
+.ear_in {
+  width: 109.19px;
+  height: 96.43px;
+  left: 20%;
+  top: 18%;
+  background: #765f5f;
+  border-radius: 360px 76px 0px 0px;
+}
+.ear_sec {
+  animation: rightEarMoving 0.7s infinite alternate;
+  width: 158.03px;
+  height: 139.56px;
+  z-index: -1;
+  top: -20%;
+  left: -11%;
+  background: #f7c04a;
+  border-radius: 360px 76px 0px 0px;
+}
+.eyebrows {
+  width: 25.74px;
+  height: 49.26px;
+  left: 55%;
+  top: 38.24px;
+  border-radius: 72% 28% 72% 28% / 72% 28% 72% 28%;
+  background: #d9d9d9;
+  transform: rotate(22.05deg);
+}
+.eyebrows_sec {
+  width: 25.74px;
+  height: 49.26px;
+  left: 37%;
+  top: 38.24px;
+  border-radius: 72% 28% 72% 28% / 72% 28% 72% 28%;
+  background: #d9d9d9;
+  transform: rotate(-50.05deg);
+}
+.eye {
+  animation: rightEyeMoving 2s infinite alternate;
+  width: 47.8px;
+  height: 47.8px;
+  left: 59%;
+  top: 93.3px;
+  border-radius: 50%;
+  background: #765f5f;
+}
+.pupil {
+  width: 18.35px;
+  height: 18.35px;
+  left: 5%;
+  top: 35%;
+  border-radius: 50%;
+  background: #ffffff;
+}
+.pupil_small {
+  width: 10.67px;
+  height: 10.67px;
+  left: 45%;
+  top: 25%;
+  order: -1;
+  border-radius: 50%;
+  background: #ffffff;
+}
+.eye_sec {
+  animation: leftEyeMoving 2s infinite alternate;
+  width: 47.8px;
+  height: 47.8px;
+  left: 27%;
+  top: 93.3px;
+  border-radius: 50%;
+  background: #765f5f;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.hair_front {
+  animation: hairFrontMoving 1s infinite alternate;
+  top: -425%;
+  left: 0%;
+}
+.hair {
+  animation: hairMoving 1s infinite alternate;
+  z-index: -2;
+  width: 400px;
+  top: -630%;
+  left: -110%;
+}
+.nose {
+  animation: noseMoving 2s infinite;
+  width: 32.01px;
+  height: 26.04px;
+  left: 165.75px;
+  top: 152.06px;
+  background: #7c5656;
+  border-radius: 98.5px;
+}
+.mouse {
+  width: 125.06px;
+  height: 59.75px;
+  left: 119.8px;
+  top: 210.68px;
+  border-radius: 0 0 150px 150px;
+  background: #7c5656;
+}
+.philtrum {
+  width: 61.89px;
+  height: 61.89px;
+  left: 0%;
+  top: -50%;
+  border-radius: 50%;
+  background: #efefef;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.philtrum_sec {
+  width: 61.89px;
+  height: 61.89px;
+  left: 50%;
+  top: -50%;
+  border-radius: 50%;
+  background: #efefef;
+}
+.tongue {
+  animation: tongueMoving 0.5s infinite alternate;
+  width: 46.1px;
+  height: 45.21px;
+  left: 30%;
+  top: 0%;
+  background: #f55050;
+  border-radius: 100.5px;
+}
+.point {
+  width: 4.27px;
+  height: 4.27px;
+  left: 35%;
+  top: 1%;
+  border-radius: 50%;
+  background: #361e1e;
+}
+.point_2 {
+  width: 4.27px;
+  height: 4.27px;
+  left: 25%;
+  top: 20%;
+  border-radius: 50%;
+  background: #361e1e;
+}
+.point_3 {
+  width: 4.27px;
+  height: 4.27px;
+  left: 15%;
+  top: 0%;
+  border-radius: 50%;
+  background: #361e1e;
+}
+.point_4 {
+  width: 4.27px;
+  height: 4.27px;
+  left: 60%;
+  top: 1%;
+  border-radius: 50%;
+  background: #361e1e;
+}
+.point_5 {
+  width: 4.27px;
+  height: 4.27px;
+  left: 70%;
+  top: 25%;
+  border-radius: 50%;
+  background: #361e1e;
+}
+.point_6 {
+  width: 4.27px;
+  height: 4.27px;
+  left: 80%;
+  top: 0%;
+  border-radius: 50%;
+  background: #361e1e;
+}
+
+.face,
+.ear,
+.ear_in,
+.ear_sec,
+.eyebrows,
+.eyebrows_sec,
+.eye,
+.eye_sec,
+.nose,
+.mouse,
+.philtrum,
+.philtrum_sec,
+.tongue {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.face,
+.facemask,
+.ear,
+.ear_in,
+.ear_sec,
+.eyebrows,
+.eyebrows_sec,
+.eye,
+.eye_sec,
+.pupil,
+.pupil_small,
+.nose,
+.mouse,
+.philtrum,
+.philtrum_sec,
+.tongue,
+.point,
+.point_2,
+.point_3,
+.point_4,
+.point_5,
+.point_6,
+.spin,
+.hair_front,
+.hair {
+  position: absolute;
+}

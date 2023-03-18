@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  background-color: #fffaf0;
+}
+form {
+  width: 392px;
+  height: 339px;
+  margin: 30px auto;
+}
+input,
+button {
+  height: 48px;
+  width: 100%;
+  box-sizing: border-box;
+}
+label {
+  font-family: 'Pretendard';
+  color: #29363d;
+  display: block;
+  margin-bottom: 8px;
+}
+input {
+  border: none;
+  background-color: #fff;
+  height: 48px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #677880;
+  border-radius: 4px 4px 0px 0px;
+  transition: box-shadow 0.2s;
+  padding: 0 10px;
+  cursor: pointer;
+}
+input:hover {
+  box-shadow: 0 2px 0 0 royalblue;
+}
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px royalblue;
+  border-radius: 4px;
+}
+
+button {
+  border-radius: 4px;
+  background-color: #29363d;
+  color: #f4f5f5;
+  margin-bottom: 54px;
+}
+
+button:disabled {
+  background-color: #9fa9ae;
+}

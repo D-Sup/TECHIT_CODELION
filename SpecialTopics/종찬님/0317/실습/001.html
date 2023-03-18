@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    h1,
+    ol {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    .l_wrapper {
+      width: auto;
+      max-width: 960px;
+      box-shadow: inset 0 0 10px red;
+
+      margin: 100px auto;
+    }
+
+    .section-timeline li {
+      box-shadow: inset 0 0 10px blue;
+      width: 50%;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+
+    .section h1 {
+      margin-bottom: 30px;
+    }
+
+    .section-timeline {
+      position: relative;
+    }
+
+    .section-timeline::before {
+      content: 'wow';
+      background-color: red;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 10px;
+      margin: 40px auto -100px;
+      border-radius: 6px;
+
+    }
+
+    .section-timeline li:nth-child(even) {
+      margin-left: auto;
+      margin-top: -40px;
+      margin-bottom: -40px;
+      ;
+    }
+
+    .section-timeline {
+      margin: 0 -10px;
+
+    }
+
+    .year {
+      background-color: orange;
+      padding: 10px;
+      min-height: 150px;
+      border-radius: 40px;
+    }
+
+    @media (max-width: 800px) {
+      * {
+        box-shadow: 0 0 100px black;
+      }
+
+      .section-timeline li,
+      .section-timeline li:nth-child(even) {
+        width: initial;
+        margin: 0;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="">
+</head>
+
+<body>
+  <div class="l_wrapper">
+    <section class="section">
+      <h1>CSS TIMELINE</h1>
+      <ol class="section-timeline">
+        <li>
+          <div class="year">
+            2021
+          </div>
+        </li>
+        <li>
+          <div class="year">
+            2021
+          </div>
+        </li>
+        <li>
+          <div class="year">
+            2021
+          </div>
+        </li>
+        <li>
+          ONE
+        </li>
+        <li>
+          TWO
+        </li>
+        <li>
+          TWO
+        </li>
+        <li>
+          TWO
+        </li>
+        <li>
+          TWO
+        </li>
+        <li>
+          TWO
+        </li>
+        </ul>
+    </section>
+  </div>
+  <script src=""></script>
+</body>
+
+</html>
