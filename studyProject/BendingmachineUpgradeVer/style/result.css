@@ -1,0 +1,127 @@
+.container-top {
+  width: 360px;
+  height: 545px;
+}
+.possession {
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+.possession-box {
+  width: 306px;
+  height: 32px;
+  border-radius: var(--border-radius);
+  padding: 0 10px;
+  background: #eae8fe;
+  margin: auto;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.possession-box > p::after {
+  content: ' 원';
+  font-weight: 700;
+}
+.container-main {
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  height: calc(545px - 70px);
+  margin: 20px auto;
+  padding-top: 25px;
+}
+.EarnedTitle {
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 13px;
+}
+.EarnedItems {
+  position: relative;
+  padding-top: 8px;
+  padding-left: 8px;
+  width: 306px;
+  height: 364px;
+  background-color: #eae8fe;
+  margin: auto;
+  border: 4px solid #eae8fe;
+  overflow-y: scroll;
+  border-radius: var(--border-radius);
+}
+
+.EarnedItems::-webkit-scrollbar {
+  width: 4px;
+}
+
+.EarnedItems::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 50px;
+}
+
+.buyItem {
+  position: relative;
+  width: 276px;
+  height: 46px;
+  font-size: 9px;
+  background: #fff;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius);
+  margin-bottom: 6px;
+  transition: transform 0.2s;
+}
+.buyItem img {
+  width: 18px;
+  height: 33px;
+  margin: 6px 10px;
+}
+/* .countBuyItem {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #bdbdbd;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+  right: 8px;
+} */
+
+.totalPrice {
+  width: 306px;
+  margin: 6px auto;
+  direction: rtl;
+  font-size: 12px;
+  line-height: 17px;
+}
+.totalPrice > strong::after {
+  content: '원';
+}
+
+/* .selectItem::before {
+  content: '';
+  position: absolute;
+  background: center / contain no-repeat url(../images/can-red.png);
+  top: 6px;
+  left: 10px;
+  width: 18px;
+  height: 33px;
+}
+.selectItem::after {
+  content: '1';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  right: 8px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+} */

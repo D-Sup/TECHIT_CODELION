@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>벤딩머신 | 안동섭</title>
+  <link rel="stylesheet" href="style/common.css">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/result.css">
+</head>
+
+<body>
+  <header>
+    <img src="./images/logo.png" alt="">
+  </header>
+  <main>
+    <article class="left-wrapper">
+      <section class="container">
+        <div class="items item-01" data-id="0">
+          <img src="./images/can-red.png" alt="오리지널 콜라 이미지">
+          <h2 class="name">Original_Cola</h2>
+          <p class="price">1000원</p>
+          <span class="remain a11y-hidden"></span>
+          <div class="sold"></div>
+        </div>
+        <div class="items item-02" data-id="1">
+          <img src="./images/can-violet.png" alt="보라색 콜라 이미지">
+          <h2 class="name">Violet_Cola</h2>
+          <p class="price">1000원</p>
+          <span class="remain a11y-hidden"></span>
+          <div class="sold"></div>
+        </div>
+        <div class="items item-03" data-id="2">
+          <img src="./images/can-yellow.png" alt="노란색 콜라 이미지">
+          <h2 class="name">Yellow_Cola</h2>
+          <p class="price">1000원</p>
+          <span class="remain a11y-hidden"></span>
+          <div class="sold"></div>
+        </div>
+        <div class="items item-04" data-id="3">
+          <img src="./images/can-blue.png" alt="쿨색 콜라 이미지">
+          <h2 class="name">Cool_Cola</h2>
+          <p class="price">1000원</p>
+          <span class="remain a11y-hidden"></span>
+          <div class="sold"></div>
+        </div>
+        <div class="items item-05" data-id="4">
+          <img src="./images/can-green.png" alt="초록색 콜라 이미지">
+          <h2 class="name">Green_Cola</h2>
+          <p class="price">1000원</p>
+          <span class="remain a11y-hidden"></span>
+          <div class="sold"></div>
+        </div>
+        <div class="items item-06" data-id="5">
+          <img src="./images/can-orange.png" alt="오렌">
+          <h2 class="name">Orange_Cola</h2>
+          <p class="price">1000원</p>
+          <span class="remain a11y-hidden"></span>
+          <div class="sold"></div>
+        </div>
+        <div class="balance">
+          <strong>잔액</strong>
+          <p id="balanceCount">0</p>
+        </div>
+        <div class="sort btn-return">
+          <strong>거스름돈 반환</strong>
+        </div>
+        <div class="input-amount">
+          <input id='inputNumber' type="number" step="100" min="0" placeholder="입금액 입력">
+        </div>
+        <div class="sort btn-amount">
+          <strong>입금</strong>
+        </div>
+        <div class="basket">
+          <!-- <div class="selectItem">
+            <img src="./images/can-red.png" alt="">
+            Original_Cola
+            <div class="countSelectItem">1</div>
+          </div>
+          <div class="selectItem">
+            <img src="./images/can-green.png" alt="">
+            Green_Cola
+            <div class="countSelectItem">2</div>
+          </div>
+          <div class="selectItem">
+            <img src="./images/can-orange.png" alt="">
+            Orange_Cola
+            <div class="countSelectItem">1</div>
+          </div>
+          <div class="selectItem">
+            <img src="./images/can-violet.png" alt="">
+            Violet_Cola
+            <div class="countSelectItem">5</div>
+          </div> -->
+        </div>
+        <div class="sort btn-submit">
+          <strong>획득</strong>
+        </div>
+      </section>
+    </article>
+    <div class="right-wrapper">
+      <div class="container-top">
+        <div class="possession">
+          <div class="possession-box">
+            <strong>소지금 :</strong>
+            <p id="possession-money">0</p>
+          </div>
+        </div>
+        <div class="container-main">
+          <h2 class="EarnedTitle">획득한 음료</h2>
+          <div class="EarnedItems">
+            <!-- <div class="selectItem">
+            <img src="./images/can-red.png" alt="">
+            Original_Cola
+            <div class="countSelectItem">1</div>
+          </div>
+          <div class="selectItem">
+            <img src="./images/can-green.png" alt="">
+            Green_Cola
+            <div class="countSelectItem">2</div>
+          </div>
+          <div class="selectItem">
+            <img src="./images/can-orange.png" alt="">
+            Orange_Cola
+            <div class="countSelectItem">1</div>
+          </div>
+          <div class="selectItem">
+            <img src="./images/can-violet.png" alt="">
+            Violet_Cola
+            <div class="countSelectItem">5</div>
+          </div> -->
+          </div>
+          <div class="totalPrice">
+            <strong>총금액 : 0</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
