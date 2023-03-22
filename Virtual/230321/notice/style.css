@@ -1,0 +1,73 @@
+* {
+  font-family: 'Pretendard';
+  font-style: normal;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+.top-container {
+  width: 728px;
+}
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 22px;
+}
+h1 {
+  font-weight: 700;
+  font-size: 30px;
+}
+header img {
+  position: absolute;
+  right: 9px;
+  top: 9px;
+}
+
+.line {
+  width: 2px;
+  height: 10px;
+  background: #ddd;
+}
+
+header > p {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.card {
+  /* background: red; */
+  width: 100%;
+}
+.card-content {
+  height: 56px;
+  display: flex;
+  line-height: 56px;
+}
+
+.card-content strong {
+  color: #2e6ff2;
+  font-weight: 700;
+  font-size: 16px;
+  margin-left: 16px;
+}
+
+.card-content .text {
+  word-spacing: -2px;
+  margin-left: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card-content .time {
+  margin-left: auto;
+  margin-right: 16px;
+}

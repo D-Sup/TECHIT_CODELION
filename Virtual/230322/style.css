@@ -1,0 +1,216 @@
+* {
+  font-family: 'Spoqa Han Sans Neo', sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+/* header */
+.container {
+  margin: 0 auto;
+  width: 520px;
+  /* height: 736px; */
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+}
+
+header {
+  position: relative;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.tit-weniv {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 18px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.a-cancel {
+  position: absolute;
+  top: 0;
+  right: 24px;
+}
+
+/* main */
+main {
+  padding: 26px 24px 38px 24px;
+}
+
+.p-explain {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.inpt {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  padding: 0 16px;
+}
+
+.warningalt {
+  margin-bottom: 10px;
+  color: #f4492e;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.txt-hide {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.labl-hold {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  color: #767676;
+  cursor: pointer;
+}
+
+.labl-hold::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  vertical-align: -5px;
+  margin-right: 10px;
+  outline: 1px solid #2f80ed;
+  border-radius: 50%;
+  transition: outline 0.1s ease;
+}
+
+.labl-hold::after {
+  position: absolute;
+  left: 0;
+  top: 0.02em;
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  opacity: 0;
+  background: url(./images/check.svg) 0 0 / 22px no-repeat;
+  transition: 0.3s ease;
+}
+
+.inp-hold:checked + .labl-hold::after {
+  opacity: 1;
+}
+.inp-hold:hover + .labl-hold::before {
+  outline: 3px solid #2f80ed;
+}
+
+.btn-login {
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 50px;
+  background: #2f80ed;
+  border-radius: 5px;
+}
+
+.login-util {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #767676;
+  gap: 12px;
+}
+
+.line {
+  width: 1px;
+  height: 18px;
+  background: #000;
+}
+
+/* footer */
+.divid span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 13px;
+}
+
+.divid span::before {
+  content: '';
+  width: 210px;
+  height: 1px;
+  background: #c4c4c4;
+}
+
+.divid span::after {
+  content: '';
+  width: 210px;
+  height: 1px;
+  background: #c4c4c4;
+}
+
+.cont-sns-login {
+  padding: 0 24px 25px 24px;
+}
+
+.btn-snslogin {
+  position: relative;
+  border: none;
+  background: #fff;
+  width: 472px;
+  height: 50px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.snslogo {
+  position: absolute;
+  left: 12px;
+}
+
+.btn-snslogin:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.google {
+  border: 1px solid #767676;
+}
+
+.facebook {
+  border: 1px solid #2d9cdb;
+}
+
+.naver {
+  border: 1px solid #00bf18;
+}
+
+.kakao {
+  border: 1px solid #f2c94c;
+}

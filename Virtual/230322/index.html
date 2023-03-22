@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 페이지</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1 class="tit-weniv"> 로그인 또는 회원가입
+      </h1>
+      <a href="#" class="a-cancel">
+        <img src="./images/cancel.svg">
+      </a>
+    </header>
+    <main>
+
+      <p class="p-explain">위니브에서 여러분의 궁금증을 해결하세요! :)</p>
+
+      <form>
+        <label for="id" class="a11y-hidden">이메일</label>
+        <input type="email" id="id" class="inpt id" required>
+
+        <label for="pw" class="a11y-hidden">비밀번호</label>
+        <input type="password" id="pw" class="inpt pw" required>
+
+        <p class="warningalt">아이디 혹은 비밀번호과 일치하지 않습니다.</p>
+
+        <input type="checkbox" id="loginkeep" class="inp-hold txt-hide">
+        <label for="loginkeep" class="labl-hold">로그인 상태유지</label>
+
+        <button type="submit" class="btn-login">로그인</button>
+      </form>
+
+      <div class="login-util">
+        <p>회원가입</p>
+        <div class="line"></div>
+        <p>아이디/비밀번호 찾기</p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="divid">
+        <span>또는</span>
+      </div>
+
+      <div class="cont-sns-login">
+        <button class="btn-snslogin google">
+          <img class="snslogo" src="./images/google_logo.svg" alt="">
+          <span>구글 계정으로 로그인</span>
+        </button>
+        <button class="btn-snslogin facebook">
+          <img class="snslogo" src="./images/facebook_logo.svg" alt="">
+
+          <span>페이스북 계정으로 로그인</span>
+
+        </button>
+        <button class="btn-snslogin naver">
+          <img class="snslogo" src="./images/naver_logo.svg" alt="">
+
+          <span>네이버 계정으로 로그인</span>
+
+        </button>
+        <button class="btn-snslogin kakao">
+          <img class="snslogo" src="./images/kakao_logo.svg" alt="">
+          <span>카카오 계정으로 로그인</span>
+
+        </button>
+      </div>
+
+    </footer>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- 
+    
+    구글 계정으로 로그인
+    페이스북 계정으로 로그인
+    네이버 계정으로 로그인
+    카카오 계정으로 로그인
+   -->
+  <script src=""></script>
+</body>
+
+</html>

@@ -5,6 +5,7 @@
   gap: 12px;
 }
 .items {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,10 +14,20 @@
   border-radius: 10px;
   transition: 0.1s;
 }
+.out {
+  border: none;
+  cursor: not-allowed;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8) url(../images/sold-out.png) no-repeat center center;
+  border-radius: 10px;
+}
 .items > .name {
   margin-top: 6px;
   margin-bottom: 7px;
   font-size: 9px;
+  font-weight: 700;
   line-height: 13px;
 }
 .items > .price {
@@ -28,25 +39,17 @@
   font-size: 12px;
   color: #fff;
 }
-.item-02 {
-  cursor: default;
-  position: relative;
-}
-.item-02::before {
-  content: '';
-  position: absolute;
 
-  background: rgba(0, 0, 0, 0.8) url(../images/sold-out.png) no-repeat center center;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
 .items:hover {
   border: 3px solid #6327fe;
   border-radius: 10px;
 }
 .items:active {
   border: 3px solid tomato;
+  border-radius: 10px;
+}
+.active {
+  border: 3px solid #6327fe;
   border-radius: 10px;
 }
 .balance {
@@ -62,10 +65,19 @@
 .balance > p::after {
   content: ' 원';
 }
+.btn-return:hover,
+.btn-amount:hover {
+  background: #aa77ff;
+  color: #f2f2f2;
+}
+.btn-submit:hover {
+  background: #f21368;
+}
+
 .btn-return {
   box-shadow: var(--box-shadow-1);
   font-size: 12.9px;
-
+  transition: 0.2s;
   border-radius: var(--border-radius);
 }
 .input-amount {
@@ -83,7 +95,9 @@
   box-shadow: var(--box-shadow-1);
   border-radius: var(--border-radius);
   font-size: 12.9px;
+  transition: 0.1s;
 }
+
 .basket {
   grid-area: 5/1/5/3;
   background: #eae8fe;
@@ -97,6 +111,7 @@
   border-radius: var(--border-radius);
   font-weight: 700;
   color: #fff;
+  transition: 0.1s;
 }
 .sort {
   display: flex;
@@ -107,6 +122,7 @@
   padding-left: 8px;
   padding-top: 8px;
   overflow-y: scroll;
+  overflow-x: hidden;
   border: 4px solid #eae8fe;
 }
 
@@ -117,6 +133,15 @@
 .basket::-webkit-scrollbar-thumb {
   background: #fff;
   border-radius: 50px;
+}
+.translateXX-minus {
+  transform: translateX(-290px);
+}
+.translateX-minus {
+  transform: translateX(-180px);
+}
+.translateX-plus {
+  transform: translateX(200px);
 }
 .selectItem {
   position: relative;
@@ -132,12 +157,12 @@
   display: flex;
   align-items: center;
   margin-bottom: 6px;
+  transition: transform 0.2s;
 }
 .selectItem > img {
   width: 18px;
   height: 33px;
   margin: 6px 10px;
-  background: center / contain no-repeat url(../images/can-red.png);
 }
 .countSelectItem {
   position: absolute;

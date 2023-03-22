@@ -46,7 +46,7 @@
   height: 364px;
   background-color: #eae8fe;
   margin: auto;
-  border: 1px solid #bdbdbd;
+  border: 4px solid #eae8fe;
   overflow-y: scroll;
   border-radius: var(--border-radius);
 }
@@ -71,25 +71,26 @@
   align-items: center;
   border-radius: var(--border-radius);
   margin-bottom: 6px;
+  transition: transform 0.2s;
 }
 .buyItem img {
   width: 18px;
   height: 33px;
   margin: 6px 10px;
 }
-.countBuyItem {
+/* .countBuyItem {
   position: absolute;
   width: 30px;
   height: 30px;
   border: 1px solid #bdbdbd;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 14px;
   line-height: 20px;
   right: 8px;
-}
+} */
 
 .totalPrice {
   width: 306px;
