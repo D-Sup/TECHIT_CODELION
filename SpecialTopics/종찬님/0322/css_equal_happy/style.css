@@ -1,4 +1,6 @@
-body, p, ul {
+body,
+p,
+ul {
   margin: initial;
   padding: initial;
 }
@@ -7,7 +9,12 @@ li {
   list-style-type: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: initial;
   font-size: inherit;
   font-weight: inherit;
@@ -20,8 +27,8 @@ img {
 }
 
 :root {
-    font-family: 'Montserrat', sans-serif;
-  	font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 .l_wrapper {
@@ -116,8 +123,8 @@ img {
 
 .card-cover h2 {
   position: absolute;
-  background-color: rgb( 0 0 0 / .4 );
-  inset: 0; 
+  background-color: rgb(0 0 0 / 0.4);
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,7 +150,7 @@ img {
 }
 
 .lists li + li {
-  margin-top: 6px;;
+  margin-top: 6px;
 }
 
 .lists li::before {
@@ -155,4 +162,3 @@ img {
   border-radius: 50%;
   margin-right: 10px;
 }
-
