@@ -1,5 +1,6 @@
 {
   "liveServer.settings.host": "192.168.100.251",
   "liveServer.settings.useLocalIp": true,
-  "editor.hover.sticky": false
+  "editor.hover.sticky": false,
+  "liveSassCompile.settings.showOutputWindowOn": "Debug"
 }

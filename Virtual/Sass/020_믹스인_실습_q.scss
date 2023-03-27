@@ -1,0 +1,50 @@
+// .card {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .card-item {
+//   width: 100px;
+//   height: 100px;
+//   border-radius: 10%;
+// }
+
+// .product {
+//   display: flex;
+//   justify-content: center;
+//   align-items: right;
+// }
+
+// .product-item {
+//   width: 200px;
+//   height: 200px;
+//   border-radius: 20%;
+// }
+
+@mixin flex($align-items: center) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: center;
+}
+
+@mixin box($width: 100, $height: 100, $border-radius: 10%) {
+  width: $width * 1px;
+  height: $height * 1px;
+  border-radius: $border-radius;
+}
+
+.card {
+  @include flex;
+}
+
+.card-item {
+  @include box;
+}
+
+.product {
+  @include flex(right);
+}
+.product-item {
+  @include box(100, 100, 20%);
+}

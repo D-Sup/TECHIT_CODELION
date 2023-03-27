@@ -1,0 +1,25 @@
+@mixin one {
+  width: 100px;
+  height: 100px;
+  color: white;
+  @content;
+}
+
+.test1 {
+  @include one;
+}
+.test2 {
+  @include one {
+    background-color: red;
+  }
+}
+.test2 {
+  @include one {
+    background-color: red;
+    font-size: 32px;
+  }
+}
+
+.test3 {
+  @include one;
+}
