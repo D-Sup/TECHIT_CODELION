@@ -13,48 +13,63 @@
   <div class="l-wrapper">
     <div class="header-bg">
       <header class="header">
-        <div class="wrapper-header">
+        <div class="top-header">
           <h1 class="header-logo">
             <span class="a11y-hidden">HODU 로고</span>
-            <img src="./images/logo.svg" alt="">
+            <a href="#none">
+              <img src="./images/logo.svg" alt="">
+            </a>
           </h1>
-          <nav class="nav">
-            <ul class="nav-list">
-              <li>Home</li>
-              <li>About</li>
-              <li>Support</li>
+          <nav class="header-nav">
+            <ul>
+              <li>
+                <a href="#none">Home</a>
+              </li>
+              <li>
+                <a href="#none">About</a>
+              </li>
+              <li>
+                <a href="#none">Support</a>
+              </li>
+              <li>
+                <a href="">
+                  <button class="header-btn">Download</button>
+                </a>
+              </li>
             </ul>
-            <button class="header-btn">Download</button>
           </nav>
+          <img class="toogle-btn" src="./images/toggle.svg" alt="">
         </div>
         <div class="about">
-          <h2 class="about-headings">
-            Lorem Ipsum is simply<br>
-            dummy text of the printing and
-          </h2>
-          <p class="about-contxt">Lorem Ipsum is simply dummy text of the printing and<br>
-            typesetting industry.<br>
-            Lorem Ipsum has been the industry's standard dummy text<br>
-            ever since the 1500s, when an unknown</p>
-          <button class="about-btn">Download</button>
-          <img class="about-img" src="./images/cat.png" alt="">
+          <div class="about-explain">
+            <h2 class="about-headings">
+              Lorem Ipsum is simply<br>
+              dummy text of the printing and
+            </h2>
+            <p class="about-contxt">Lorem Ipsum is simply dummy text of the printing and<br>
+              typesetting industry.<br>
+              Lorem Ipsum has been the industry's standard dummy text<br>
+              ever since the 1500s, when an unknown</p>
+            <button class="about-btn">Download</button>
+          </div>
+          <img class="about-img" src="./images/cat.png" alt="박스를 머리에 뒤집어쓴 고양이 이미지">
         </div>
       </header>
     </div>
     <main class="main">
-      <section class="section section-body">
-        <div class="body-intro">
-          <img class="intro-img" src="./images/intro_1.png" alt="">
-          <div class="intro-title">
+      <section class="section-body">
+        <figure class="body-intro">
+          <img class="intro-img" src="./images/img_4.png" alt="옆으로 눕고 고개를 옆으로 슥하고 덩그러니 무엇인가를 바라보는 고양이 이미지">
+          <figcaption>
             <h3 class="intro-headings">
               Lorem Ipsum is simply<br>
               dummy text of the printing<br>
               and dummy text</h3>
             <p class="intro-contxt">
-              Lorem Ipsum is simply dummy text of the printing<br> and typesetting industry.
+              Lorem Ipsum is simply dummy text of the printing and typesetting<br> industry.
             </p>
-          </div>
-        </div>
+          </figcaption>
+        </figure>
         <div class="body-info">
           <h3 class="info-headings">
             dummy text of the printing and dummy
@@ -64,11 +79,23 @@
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
         </div>
         <div class="body-gallery">
-          <div class="gallery-list">
-            <img src="./images/img_1.png" alt="">
-            <img src="./images/img_2.png" alt="">
-            <img src="./images/img_3.png" alt="">
-          </div>
+          <ul class="gallery-list">
+            <li>
+              <button>
+                <img src="./images/img_1.png" alt="캣타워에서 얼굴만 내밀고 무언가를 지켜보는 고양이 이미지">
+              </button>
+            </li>
+            <li>
+              <button>
+                <img src="./images/img_2.png" alt="캣타워에서 얼굴만 내밀고 무언가를 지켜보는 고양이 이미지">
+              </button>
+            </li>
+            <li>
+              <button>
+                <img src="./images/img_3.png" alt="나와 눈을 마주치고있는 고양이 이미지">
+              </button>
+            </li>
+          </ul>
           <div class="gallery-caption">
             <p class="caption-contxt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown<br>
@@ -90,25 +117,52 @@
         <form class="subscribe-form">
           <div class="subscribe-inpt">
             <img src="./images/msg.svg" alt="">
-            <input type="email" placeholder="Enter your e-mail address">
+            <label for="email" class="a11y-hidden"></label>
+            <input id="email" type="email" placeholder="Enter your e-mail address">
           </div>
-          <button class="subscribe-btn">Subscribe</button>
+          <button type="submit" class="subscribe-btn">Subscribe</button>
         </form>
       </article>
     </main>
     <footer class="footer">
       <img src="./images/img_5.png" alt="" class="footer-img">
       <div class="section-share">
-        <h1 class="footer-logo">
-          <img src="./images/logo_footer.svg" alt="">
+        <h2 class="footer-logo">
           <span class="a11y-hidden">HODU 로고</span>
-        </h1>
-        <div class="share-link">
-          <img src="./images/sns1.svg" alt="">
-          <img src="./images/sns2.svg" alt="">
-          <img src="./images/sns3.svg" alt="">
-          <img src="./images/sns4.svg" alt="">
-        </div>
+          <a href="#none">
+            <img src="./images/logo_footer.svg" alt="HODU 로고 이미지">
+          </a>
+        </h2>
+        <ul class="share-link">
+          <li>
+            <a href="#none">
+              <img src="./images/sns1.svg" alt="bing 로고 이미지">
+            </a>
+          </li>
+          <li>
+            <a href="#none">
+              <img src="./images/sns2.svg" alt="instagram 로고 이미지">
+            </a>
+          </li>
+          <li>
+            <a href="#none">
+              <img src="./images/sns3.svg" alt="facebook 로고 이미지">
+            </a>
+          </li>
+          <li>
+            <a href="#none">
+              <img src="./images/sns4.svg" alt="youtube 로고 이미지">
+            </a>
+          </li>
+        </ul>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#none">About</a></li>
+            <li><a href="#none">Blog</a></li>
+            <li><a href="#none">Support</a></li>
+            <li><a href="#none">Terms of Use</a></li>
+          </ul>
+        </nav>
       </div>
     </footer>
   </div>
