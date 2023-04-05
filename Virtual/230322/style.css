@@ -40,8 +40,14 @@ header {
   line-height: 20px;
 }
 
+
+
+
 .a-cancel {
   position: absolute;
+  width: 22px;
+  height: 22px;
+  background: url(./images/css_sprites.png) -69px -36px / 118px 64px;
   top: 0;
   right: 24px;
 }
@@ -99,31 +105,28 @@ main {
   display: inline-block;
   width: 22px;
   height: 22px;
+  background: url(./images/css_sprites.png) -5px -5px / 118px 64px;
   vertical-align: -5px;
   margin-right: 10px;
-  outline: 1px solid #2f80ed;
   border-radius: 50%;
-  transition: outline 0.1s ease;
 }
 
 .labl-hold::after {
   position: absolute;
   left: 0;
-  top: 0.02em;
+  top: 1px;
   content: '';
   display: inline-block;
   width: 22px;
   height: 22px;
   opacity: 0;
-  background: url(./images/check.svg) 0 0 / 22px no-repeat;
+  /* background: url(./images/check.svg) 0 0 / 22px no-repeat; */
+  background: url(./images/css_sprites.png) -37px -5px / 118px 64px;
   transition: 0.3s ease;
 }
 
 .inp-hold:checked + .labl-hold::after {
   opacity: 1;
-}
-.inp-hold:hover + .labl-hold::before {
-  outline: 3px solid #2f80ed;
 }
 
 .btn-login {
@@ -185,7 +188,6 @@ main {
   border: none;
   background: #fff;
   width: 472px;
-  height: 50px;
   border-radius: 5px;
   margin: auto;
 }
@@ -197,6 +199,13 @@ main {
 
 .btn-snslogin:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.google,
+.facebook,
+.naver,
+.kakao{
+  padding: 15px 14px;
 }
 
 .google {
@@ -213,4 +222,42 @@ main {
 
 .kakao {
   border: 1px solid #f2c94c;
+}
+
+.google::before {
+  float: left;
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(./images/css_sprites.png) -37px -37px / 118px 64px;
+
+}
+
+.facebook::before  {
+  content: "";
+  float: left;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(./images/css_sprites.png) -96px -5px / 118px 64px;
+}
+
+.naver::before  {
+  content: "";
+  float: left;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(./images/css_sprites.png) -5px -37px / 118px 64px;
+}
+
+.kakao::before  {
+  content: "";
+  float: left;
+
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(./images/css_sprites.png) -69px -5px / 118px 64px;
 }

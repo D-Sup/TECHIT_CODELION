@@ -126,6 +126,7 @@ body {
     margin-right: 8px;
     vertical-align: -5px;
     background-image: url("images_login/icon_check_empty.png");
+    background: url(./images_login/css_sprites.png) -52px -10px;
 
 }
 
@@ -135,8 +136,8 @@ body {
 }
 
 .form-login .inp-hold:checked+.labl-hold::before {
-    background-image: url("images_login/icon_check.png");
-
+    /* background-image: url("images_login/icon_check.png"); */
+    background: url(./images_login/css_sprites.png) -10px -10px;
 }
 
 .link-userinfo {
