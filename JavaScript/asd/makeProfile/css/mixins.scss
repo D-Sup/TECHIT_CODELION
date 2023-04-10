@@ -1,0 +1,22 @@
+@mixin font($type: null, $align:left, $color: inherit) {
+  color: $color;
+  text-align: $align
+  @content;
+}
+
+@if $type == title{
+  font-weight: 700;
+  font-size: 24px;
+}
+@else $type == title{
+  font-weight: 700;
+  font-size: 24px;
+}
+@if $type == title{
+  font-weight: 700;
+  font-size: 24px;
+}
+@if $type == title{
+  font-weight: 700;
+  font-size: 24px;
+}

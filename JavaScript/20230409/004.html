@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <style>
+      div {
+        margin: auto;
+        width: 500px;
+        height: 500px;
+        background-color: black;
+      }
+      .btn-container{
+        display: flex;
+        list-style-type: none;
+        gap: 10px;
+        justify-content: center;
+        padding: 0;
+      }
+      .red {
+        background-color: red;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .green {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <ul class="btn-container">
+      <li><button type="button" class="red">빨강</button></li>
+      <li><button type="button" class="yellow">노랑</button></li>
+      <li><button type="button" class="green">초록</button></li>
+    </ul> 
+    <script>
+      const box = document.querySelector('div')
+      const btn = document.querySelectorAll('button')
+      // const btn = document.querySelectorAll("button[class^='btn']")
+      btn.forEach(item=> item.addEventListener('click', () =>{
+          console.log(item.className)
+          box.className=''
+          box.classList.add(item.className);
+        }))
+    </script>
+  </body>
+</html>
