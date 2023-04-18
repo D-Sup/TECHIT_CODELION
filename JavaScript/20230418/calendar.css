@@ -1,0 +1,36 @@
+#calendar {
+  display: inline-block;
+  padding: 20px;
+  background: #333;
+  text-align: center;
+  color: #fff;
+}
+
+#calendar table {
+  border-collapse: collapse;
+}
+
+caption {
+  font-size: 25px;
+  color: orange;
+  margin: 10px;
+}
+
+th,
+td {
+  padding: 20px;
+  border: 1px solid #666;
+}
+
+th:first-child,
+td:first-child {
+  color: red;
+}
+
+.prev,
+.next {
+  color: inherit;
+  padding: 10px;
+  margin: 5px;
+  background-color: #333;
+}
