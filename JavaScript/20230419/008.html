@@ -16,7 +16,7 @@ class FoodPicker {
     this.name = food
   }
   selectMenu(){
-    console.log(`오늘의 메뉴는... ${this.name[Math.floor(Math.random()*food.length)]}!`);
+    console.log(`오늘의 메뉴는... ${this.name[Math.floor(Math.random()*this.name.length)]}!`);
   }
 }
 
