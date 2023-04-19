@@ -1,80 +1,134 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-      #app {
-        height: 100vh;
-        width: 100vw;
-        perspective: 1600px;
-      }
-      .list-item {
-        position: fixed;
-        width: 340px;
-        height: 400px;
-        padding: 0;
-        top:50%;
-        left: 50%;
-        transform: translate(-50%,-50%) rotateZ(0deg);
-        transform-style: preserve-3d;
-      }
-      .list-item li {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 1px solid #BDBDBD;
-        border-radius: 10px;
-        list-style: none;
-        backface-visibility: hidden;
-      }
 
-      .list-item li:nth-child(1){
-        transform: rotateY(0) translateZ(calc(340px * 7 / 2 / 3.14));
-      }
-      .list-item li:nth-child(2){
-        transform: rotateY(calc(360deg/7)) translateZ(calc(340px * 7 / 2 / 3.14));
-      }
-      .list-item li:nth-child(3){
-        transform: rotateY(calc(360deg/7*2)) translateZ(calc(340px * 7 / 2 / 3.14));
-      }
-      .list-item li:nth-child(4){
-        transform: rotateY(calc(360deg/7*3)) translateZ(calc(340px * 7 / 2 / 3.14));
-      }
-      .list-item li:nth-child(5){
-        transform: rotateY(calc(360deg/7*4)) translateZ(calc(340px * 7 / 2 / 3.14));
-      }
-      .list-item li:nth-child(6){
-        transform: rotateY(calc(360deg/7*5)) translateZ(calc(340px * 7 / 2 / 3.14));
-      }
-      .list-item li:nth-child(7){
-        transform: rotateY(calc(360deg/7*6)) translateZ(calc(340px * 7 / 2 / 3.14));
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* :root {
+      --item-number: 7;
+      --item-width: 340px;
+      --translateZ: calc(var(--item-width) * var(--item-number) / 2 / 3.14)
+    } */
 
-      .list-item img {
-        object-fit: contain;
-        width: 100%;
-        height: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <article id="app">
+    #app {
+      height: 100vh;
+      width: 100vw;
+      perspective: 1600px;
+    }
+
+    .list-item {
+      position: fixed;
+      width: 340px;
+      height: 400px;
+      padding: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotateY(0deg);
+      transform-style: preserve-3d;
+      transition: all .3s;
+    }
+
+    .list-item li {
+      user-select: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #BDBDBD;
+      border-radius: 10px;
+      list-style: none;
+      backface-visibility: hidden;
+    }
+
+    /* .list-item li:nth-child(1) {
+      transform: rotateY(0) translateZ(var(--translateZ));
+    }
+
+    .list-item li:nth-child(2) {
+      transform: rotateY(calc(360deg/7)) translateZ(var(--translateZ));
+    }
+
+    .list-item li:nth-child(3) {
+      transform: rotateY(calc(360deg/7*2)) translateZ(var(--translateZ));
+    }
+
+    .list-item li:nth-child(4) {
+      transform: rotateY(calc(360deg/7*3)) translateZ(var(--translateZ));
+    }
+
+    .list-item li:nth-child(5) {
+      transform: rotateY(calc(360deg/7*4)) translateZ(var(--translateZ));
+    }
+
+    .list-item li:nth-child(6) {
+      transform: rotateY(calc(360deg/7*5)) translateZ(var(--translateZ));
+    }
+
+    .list-item li:nth-child(7) {
+      transform: rotateY(calc(360deg/7*6)) translateZ(var(--translateZ));
+    } */
+
+    .list-item img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <article id="app">
     <ul class="list-item">
-      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/jammanbo.png" alt=""></li>
-      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/ev.png?raw=true" alt="">
-      </li>
-      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mazayoung.png?raw=true" alt="">
-      </li>
-      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mobugi.png" alt=""></li>
-      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/nyaong.png" alt=""></li>
-      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/pulin.png" alt=""></li>
-      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/weirdseed.png" alt=""></li>
     </ul>
   </article>
-  </body>
+  <script>
+    const arrPic = [
+      "https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/jammanbo.png",
+      "https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/ev.png?raw=true",
+      "https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/ev.png?raw=true",
+      "https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/ev.png?raw=true",
+    ];
+    const center = document.querySelector('.list-item');
+
+    arrPic.forEach((item) => {
+      const elLi = document.createElement('li');
+      elLi.innerHTML = `<img src="${item}" alt="">`;
+      center.appendChild(elLi);
+    })
+
+    const items = document.querySelectorAll('.list-item li');
+
+    const radius = items[0].offsetWidth * items.length / 3.14 / 2;
+
+    items.forEach((item, index) => {
+      item.style.transform = `rotateY(${360 / items.length * index}deg) translateZ(${radius}px)`;
+    });
+
+    const angle = 360 / items.length;
+    let currAngle = 0;
+
+    document.addEventListener('click', function (event) {
+      // 화면 오른쪽을 눌렀을 경우
+      if (window.innerWidth / 2 < event.clientX) {
+        currAngle += angle;
+
+        // 화면 왼쪽을 눌렀을 경우
+      } else {
+        currAngle -= angle;
+      }
+      center.style.transform = `translate(-50%, -50%) rotateY(${currAngle}deg)`;
+    });
+  </script>
+</body>
+
 </html>
+
+<!-- 
+clientX - 현재사용자가 보고있는 화면의 뷰포트를 기준으로 작동 
+screenX - 사용자가 사용하고있는 모든 모니터의 수평기준으로 바뀜
+screenX는 여러 스크린을 사용하는 경우 다르게 작동할 수 있음
+-->

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+function FoodPicker(food){
+    this.name = food
+    this.selectMenu = function(){
+      console.log(`오늘의 메뉴는... ${this.name[Math.floor(Math.random()*food.length)]}!`);
+    }
+}
+
+const todayDinner = new FoodPicker(['짜장면', '청국장', '삼겹살', '햄버거', '뿌링클', '굶기'])
+
+  </script>
+</body>
+
+</html>

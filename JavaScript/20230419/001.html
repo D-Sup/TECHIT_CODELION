@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const me = {
+      name: 'DongSup',
+      address: '서울시 광진구',
+      phoneNum: '010-7567-5023',
+      canWalk: function () {
+        console.log('웨이드가 걷는다.');
+      },
+      teaching: function (myStudent) {
+        myStudent.levelUp();
+      }
+    }
+
+    const student = {
+      level: 1,
+      levelUp: function () {
+        this.level++;
+      }
+    }
+    me.teaching(student)
+  </script>
+</body>
+
+</html>

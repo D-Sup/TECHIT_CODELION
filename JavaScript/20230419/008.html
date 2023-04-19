@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+class FoodPicker {
+  constructor(food){
+    this.name = food
+  }
+  selectMenu(){
+    console.log(`오늘의 메뉴는... ${this.name[Math.floor(Math.random()*food.length)]}!`);
+  }
+}
+
+class BabyRobot extends Robot {
+    constructor(name) {
+        super(name);
+        this.ownName = '아이크';
+    }
+
+    sayBabyName() {
+				// 또한 상속을 받게되면 부모 클래스의 메소드를 사용할 수 있게 됩니다. 때문에 this로 접근 할 수 있습니다.
+        this.sayYourName();
+        console.log('Suceeding you, Father!');
+    }
+}
+
+  </script>
+</body>
+
+</html>
