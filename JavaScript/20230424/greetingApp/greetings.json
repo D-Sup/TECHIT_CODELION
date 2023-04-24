@@ -1,0 +1,12 @@
+{
+  "greeting": [
+    {
+      "userName": "dongsup",
+      "greetings": "반갑다 반가워"
+    },
+    {
+      "userName": "supsup",
+      "greetings": "반갑다 그래"
+    }
+  ]
+}
