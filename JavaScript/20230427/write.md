@@ -33,3 +33,6 @@ export default
 
 ---
 
+fetch는 인스턴스를 반환하지않고 promise약속을 반환한다
+
+response는 또다른 객체
