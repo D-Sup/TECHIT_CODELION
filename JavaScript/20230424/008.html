@@ -29,10 +29,14 @@
         }
         xhr.send()
       }
+      function load () {
+        xhrRequest();
+        function ro () {
+          console.log('result');
 
-      xhrRequest();
-      console.log(result);
-      
+        }
+      }
+      load()
     </script>
   </body>
 </html>

@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "editorconfig": "^1.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
