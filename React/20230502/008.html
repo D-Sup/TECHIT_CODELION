@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>위니브 샵</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      async function fetchData() {
+        const response = await fetch('http://test.api.weniv.co.kr/mall');
+        const data = await response.json();
+        return data;
+      }
+
+      function Body({ data }) {
+        const items = data.map(item => (
+          <li key={item.id}>
+            <h2>{item.productName}</h2>
+            <p>{item.price}</p>
+          </li>
+        ));
+
+        return <ul>{items}</ul>;
+      }
+
+      async function renderApp() {
+        const data = await fetchData();
+        ReactDOM.render(<Body data={data} />, document.getElementById('root'));
+      }
+
+      renderApp();
+    </script>
+  </body>
+</html>
+
+<!-- 에러 메시지가 발생하는 이유는 App() 함수에서 data를 비동기적으로 받아오는 Promise 객체를 리턴하기 때문입니다. 이 Promise 객체를 그대로 Body 컴포넌트의 props로 넘겨서 렌더링하면 위와 같은 에러가 발생합니다.
+
+이를 해결하기 위해서는, App() 함수가 데이터를 받아온 뒤에 Body 컴포넌트를 렌더링하도록 수정해야 합니다. 이를 위해서는 App() 함수에서 데이터를 받아온 뒤에 ReactDOM.render() 함수를 사용해서 Body 컴포넌트를 렌더링하는 것이 좋습니다. 이렇게 하면 data를 props로 넘길 필요 없이, Body 컴포넌트 내부에서 데이터를 이용해서 UI를 구성할 수 있습니다.
+
+fetchData() 함수로 데이터를 비동기적으로 받아오고, Body 컴포넌트에서 받아온 데이터를 이용해서 UI를 구성합니다. 그리고 renderApp() 함수에서 fetchData()를 호출하고, 데이터를 받아온 뒤에 ReactDOM.render() 함수를 사용해서 Body 컴포넌트를 렌더링합니다. 이렇게 하면 Promise 객체를 그대로 렌더링하는 문제를 해결할 수 있습니다. -->
