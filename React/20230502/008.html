@@ -10,35 +10,86 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-      async function fetchData() {
+    async function fetchData() {
+      const response = await fetch('http://test.api.weniv.co.kr/mall');
+      const data = await response.json();
+      return data;
+    }
+
+    function Body({ data }) {
+      const items = data.map(item => (
+        <li key={item.id}>
+          <h2>{item.productName}</h2>
+          <p>{item.price}</p>
+        </li>
+      ));
+
+      return <ul>{items}</ul>;
+    }
+
+    async function renderApp() {
+      const data = await fetchData();
+      ReactDOM.createRoot(document.getElementById('root')).render(<Body data={data} />);
+    }
+
+    renderApp();
+    </script>
+  </body>
+</html>
+
+
+
+<!-- 문제의 코드
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>위니브 샵</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+      async function App() {
         const response = await fetch('http://test.api.weniv.co.kr/mall');
         const data = await response.json();
-        return data;
+        return React.createElement(Body, { data });
       }
 
-      function Body({ data }) {
-        const items = data.map(item => (
+      function Body({data}) {
+        const itemList = data.map(item => (
           <li key={item.id}>
             <h2>{item.productName}</h2>
             <p>{item.price}</p>
           </li>
         ));
+        return <ul>{itemList}</ul>;
+      }        
 
-        return <ul>{items}</ul>;
-      }
+      const domContainer = document.querySelector('#root');
+      const root = ReactDOM.createRoot(domContainer);
+      root.render(<App />);
 
-      async function renderApp() {
-        const data = await fetchData();
-        ReactDOM.render(<Body data={data} />, document.getElementById('root'));
-      }
-
-      renderApp();
     </script>
   </body>
-</html>
+</html> -->
 
-<!-- 에러 메시지가 발생하는 이유는 App() 함수에서 data를 비동기적으로 받아오는 Promise 객체를 리턴하기 때문입니다. 이 Promise 객체를 그대로 Body 컴포넌트의 props로 넘겨서 렌더링하면 위와 같은 에러가 발생합니다.
 
-이를 해결하기 위해서는, App() 함수가 데이터를 받아온 뒤에 Body 컴포넌트를 렌더링하도록 수정해야 합니다. 이를 위해서는 App() 함수에서 데이터를 받아온 뒤에 ReactDOM.render() 함수를 사용해서 Body 컴포넌트를 렌더링하는 것이 좋습니다. 이렇게 하면 data를 props로 넘길 필요 없이, Body 컴포넌트 내부에서 데이터를 이용해서 UI를 구성할 수 있습니다.
 
-fetchData() 함수로 데이터를 비동기적으로 받아오고, Body 컴포넌트에서 받아온 데이터를 이용해서 UI를 구성합니다. 그리고 renderApp() 함수에서 fetchData()를 호출하고, 데이터를 받아온 뒤에 ReactDOM.render() 함수를 사용해서 Body 컴포넌트를 렌더링합니다. 이렇게 하면 Promise 객체를 그대로 렌더링하는 문제를 해결할 수 있습니다. -->
+<!-- 해당 코드에서는 fetchData 함수를 이용하여 API로부터 데이터를 비동기적으로 가져와 data 변수에 저장하고, 
+React Body 컴포넌트에 전달할 (프로퍼티(props) 정보를 담은)객체로 data를 전달하고 root 객체를 생성한 후 Body 컴포넌트를 렌더링하고 있습니다.
+
+비동기 요청을 기다리지 않고, 데이터를 모두 받아오기 전에 Body 컴포넌트가 렌더링되는 바람에 데이터가 아직 없는 상태에서 컴포넌트가 렌더링되는 문제
+데이터를 받아온 뒤에 Body 컴포넌트를 렌더링하도록 수정했습니다
+
+
+fetchData() 함수로 데이터를 비동기적으로 받아오고, Body 컴포넌트에서 받아온 데이터를 이용해서 UI를 구성합니다. 그리고 renderApp() 함수에서 fetchData()를 호출하고, 데이터를 받아온 뒤에 ReactDOM.render() 함수를 사용해서 Body 컴포넌트를 렌더링합니다. 이렇게 하면 Promise 객체를 그대로 렌더링하는 문제를 해결할 수 있습니다.
+
+React에서 리스트를 렌더링할 때는 각 아이템의 유일성을 식별하기 위해 key prop을 사용하는 것이 권장됩니다. key prop은 React가 각 아이템을 추적하고 변경된 부분만 업데이트하는 데 도움을 줍니다.
+
+만약 key prop을 지정하지 않으면 React는 리스트의 각 아이템이 서로 같은 것으로 취급하여, 아이템이 추가되거나 삭제될 때 올바른 업데이트가 이루어지지 않을 수 있습니다. 이로 인해 성능 저하나 예상치 못한 동작이 발생할 수 있습니다.
+
+따라서 React에서 리스트를 렌더링할 때는 key prop을 지정해주는 것이 좋습니다. key prop의 값은 리스트 내에서 유일해야 하며, 가능하면 해당 아이템의 고유 식별자를 사용하는 것이 좋습니다. -->
