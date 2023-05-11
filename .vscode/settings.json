@@ -4,5 +4,6 @@
   "editor.hover.sticky": false,
   "liveSassCompile.settings.showOutputWindowOn": "Debug",
   "liveServer.settings.port": 5501,
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "git.ignoreLimitWarning": true
 }
