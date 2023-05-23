@@ -17,3 +17,5 @@ const vendingMachineEvents = new  VendingMachineEvents();
     await colaGenerator.setup();
     vendingMachineEvents.bindEvent();
 })()
+
+satisfies.sq
