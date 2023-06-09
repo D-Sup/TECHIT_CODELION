@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="">
+    <input class="pw-inpt" type="password" required>
+    <input class="pw-confirm" type="password" required>
+    <button>제출!</button>
+  </form>
+  <script>
+    const btn = document.querySelector('button');
+    const pwInpt = document.querySelector('.pw-inpt');
+    const pwConfirm = document.querySelector('.pw-confirm');
+
+    const regex = /(?=.*[!@#$%^&*()_+=-])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}/;
+
+    btn.addEventListener('click', () => {
+      if (!regex.test(pwInpt.value)) {
+        pwInpt.setCustomValidity("비밀번호는 최소 8자 이상이며, 대문자, 소문자, 특수 문자를 포함해야 합니다.");
+      } else if (!regex.test(pwConfirm.value)) {
+        pwConfirm.setCustomValidity("비밀번호는 최소 8자 이상이며, 대문자, 소문자, 특수 문자를 포함해야 합니다.");
+      } else if (pwInpt.value !== pwConfirm.value) {
+        pwConfirm.setCustomValidity("비밀번호 확인이 일치하지 않습니다.");
+      } else {
+        pwInpt.setCustomValidity('');
+        pwConfirm.setCustomValidity('');
+      }
+    });
+  </script>
+</body>
+
+</html>
